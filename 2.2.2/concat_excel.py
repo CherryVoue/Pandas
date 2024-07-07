@@ -10,7 +10,7 @@ Concatenates Excel data, aligning columns with matching headers and inserting bl
 import pandas as pd
 
 
-def combine_files(file_paths: list[str]) -> None:
+def concat_excel(file_paths: list[str]) -> None:
     #  Takes a list of file names/paths as a parameter
     #  No return call; combines file data in Excel and ends
 
@@ -39,4 +39,4 @@ if __name__ == '__main__':
     paths = ['data/file1.xlsx', 'data/file2.xlsx']
 
     #  Call combine function
-    combine_files(paths)
+    concat_excel(paths)

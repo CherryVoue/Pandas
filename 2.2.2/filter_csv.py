@@ -19,12 +19,7 @@ def filter_csv(file: str, date_filter: str) -> None:
     #  Converts filter to datetime object
     filter_dt = pd.to_datetime(date_filter)
 
-    #  Gets today's date as a count of days since epoch
-    today_days = pd.Timestamp.today().floor(freq='D')
-    #  Creates a datetime object with
-    today_dt = pd.to_datetime(today_days)
-
-    #  Sets csv date column to pandas series object
+    #  Sets csv date column to pandas datetime object
     sheet_dates = pd.to_datetime(df['Subscription Date'])
 
     for date in range(len(sheet_dates)):
@@ -35,7 +30,7 @@ def filter_csv(file: str, date_filter: str) -> None:
             #  Drops row from dataframe if date is before filter
             df = df.drop(date)
 
-    #  Writes dataframe data to excel without an index column
+    #  Writes dataframe data to csv without an index column
     #  Overwrites data if file exists
     df.to_csv('output/customers_filtered.csv', index=False)
 

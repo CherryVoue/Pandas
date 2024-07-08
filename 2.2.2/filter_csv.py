@@ -11,7 +11,7 @@ import pandas as pd
 
 def filter_csv(file: str, date_filter: str) -> None:
     #  Takes a list of file names/paths and date filter as parameters
-    #  No return call; filters file data in Excel and ends
+    #  No return call; filters file data in csv and ends
 
     #  Reads csv data into dataframe
     df = pd.read_csv(file)

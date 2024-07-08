@@ -1,6 +1,6 @@
 """
 Purpose: filter a csv sheet by given date (year: xxxx, month: xx, day: xx)
-Imports: pandas (with openpyxl) to load and parse Excel files
+Imports: pandas (with openpyxl) to load and parse csv files
 """
 
 #  python 3.12.3
